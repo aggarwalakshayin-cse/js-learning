@@ -77,3 +77,26 @@ console.log(typeof heroes)  // object
 console.log(typeof myObj)  // object
 console.log(typeof myFunction)  // function
 console.log(myFunction) // [Function: myFunction]
+
+// Primitive: Number, String, Boolean, BigInt, Symbol, Null, undefined
+// Non - Primitive: Array, Object, Functions
+// Stack[Primitive] => Pass By Value
+// Heap[Non - Primitive] => Pass By Reference
+
+// By Stack-> Pass By Value
+let myName = "Ak";
+let myAnotherName = myName;
+myAnotherName = "Shadow";
+console.log(myName);
+console.log(myAnotherName);
+
+// By Heap->  Pass By Reference
+let UserOne = {
+    email: "Shadow@gmail.com",
+    upi: "Shadow@upi"
+}
+let UserTwo = UserOne;
+UserTwo.email = "Ninja@gmail.com"
+UserTwo.upi = "Ninja@upi"
+console.log(UserOne)
+console.log(UserTwo)
